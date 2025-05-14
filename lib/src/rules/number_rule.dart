@@ -36,7 +36,7 @@ class NumberRule extends EnvRule<num> {
     if (value == null) {
       return null; // Skip validation if value is null and not required
     }
-    
+
     if (_integer && value is! int) {
       return '$key must be an integer.';
     }
@@ -47,7 +47,7 @@ class NumberRule extends EnvRule<num> {
   }
 
   @override
-  String? validateSpecific(num value, String key) {
+  String? validateSpecific(num? value, String key) {
     // Skip all validations if value is null and not required
     if (value == null) {
       return null;

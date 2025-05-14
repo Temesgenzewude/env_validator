@@ -2,7 +2,7 @@ abstract class EnvRule<T> {
   bool _required = false;
   String? _customMessage;
   dynamic _defaultValue;
-  List<Function(T)> _customValidators = [];
+  final List<Function(T)> _customValidators = [];
 
   /// Validates the value against all rules
   String? validate(dynamic value, String key) {
@@ -23,13 +23,14 @@ abstract class EnvRule<T> {
     if (typeError != null) return typeError;
 
     // Run specific validation rules
-    final specificError = validateSpecific(value as T, key);
+    final T typedValue = value as T;
+    final specificError = validateSpecific(typedValue, key);
     if (specificError != null) return specificError;
 
     // Run custom validators
     for (var validator in _customValidators) {
       try {
-        validator(value as T);
+        validator(typedValue);
       } catch (e) {
         return e.toString();
       }
