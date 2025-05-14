@@ -193,5 +193,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ### Support
 - 📚 [Documentation](https://pub.dev/documentation/env_validator/latest/)
-- 🐛 [Issue Tracker](https://github.com/yourusername/env_validator/issues)
-- 💬 [Discussions](https://github.com/yourusername/env_validator/discussions)
+- 🐛 [Issue Tracker](https://github.com/Temesgenzewude/env_validator/issues)
+- 💬 [Discussions](https://github.com/Temesgenzewude/env_validator/discussions)
