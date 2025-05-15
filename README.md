@@ -60,11 +60,41 @@ A robust Flutter package for validating environment variables with a fluent, typ
 
 ## Getting Started
 
-Add the package to your `pubspec.yaml`:
+Install the package by running:
+```bash
+flutter pub add env_validator
+```
+
+Or manually:
+
+1. Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  env_validator: ^0.0.1
+  env_validator: ^0.0.2
+```
+
+2. Then run:
+
+```bash
+flutter pub get
+```
+
+
+
+Place your `.env` file:
+- In your assets folder:
+   `assets/.env`
+
+Place the asset path in `pubspec.yaml`:
+
+```yaml
+flutter:
+  
+  # Others
+
+  assets:
+    - assets/.env
 ```
 
 ## Usage
@@ -72,9 +102,15 @@ dependencies:
 ### Basic Example
 
 ```dart
+import 'package:env_validator/env_validator.dart';
+
 void main() async {
+
+   // Ensure Flutter is initialized
+  WidgetsFlutterBinding.ensureInitialized();
+
   // Define your validation schema
-  final schema = {
+   final Map<String, EnvRule> schema = {
     "API_URL": StringRule()
       .required()
       .url(),
@@ -181,9 +217,6 @@ The package provides clear, actionable error messages:
 
 ## Additional Information
 
-### File Location
-Place your `.env` file:
-- In your assets folder
 
 ### Contributing
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
@@ -194,4 +227,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ### Support
 - 📚 [Documentation](https://pub.dev/documentation/env_validator/latest/)
 - 🐛 [Issue Tracker](https://github.com/Temesgenzewude/env_validator/issues)
-- 💬 [Discussions](https://github.com/Temesgenzewude/env_validator/discussions)

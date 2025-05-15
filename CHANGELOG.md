@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.2 - Documentation and Format Updates (2025-05-15)
+
+### Changed
+- Improved README with clear asset configuration instructions for pubspec.yaml
+- Fixed Dart formatting issues
+- Applied consistent code formatting across the package
+
 ## 0.0.1 - Initial Release (2025-05-14)
 
 ### Added
