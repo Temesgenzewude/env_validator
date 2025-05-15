@@ -1,4 +1,3 @@
-
 import 'rules/base_rule.dart';
 
 /// Validates environment variables against the provided schema.
@@ -15,7 +14,7 @@ void validateEnv(
   schema.forEach((key, rule) {
     final value = config[key];
     final error = rule.validate(value, key);
-    
+
     if (error != null) {
       errors.add(error);
     }
@@ -38,10 +37,9 @@ void validateEnv(
     //   }
     // }
 
-     // Always throw an exception when there are validation errors
+    // Always throw an exception when there are validation errors
     throw Exception(
-      '❌ Invalid environment configuration:\n${errors.map((e) => ' $e').join('\n')}'
+      '❌ Invalid environment configuration:\n${errors.map((e) => ' $e').join('\n')}',
     );
-    
-  } 
+  }
 }

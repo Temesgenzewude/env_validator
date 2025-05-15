@@ -1,6 +1,6 @@
 name: env_validator
 description: A robust Flutter package for validating environment variables with a fluent, type-safe API inspired by Joi.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/temesgenzewude/env_validator
 repository: https://github.com/temesgenzewude/env_validator
 issue_tracker: https://github.com/temesgenzewude/env_validator/issues
